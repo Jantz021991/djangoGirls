@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'djangogirls.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'du8q1k3diqj3d',
-        'USER': 'aybuqilialwgnk',
-        'PASSWORD':'756304d536f78dafdacdfe29b59c6e746d9ea286b2b88fb86f7ead2396808182',
-        'HOST':'postgres://aybuqilialwgnk:756304d536f78dafdacdfe29b59c6e746d9ea286b2b88fb86f7ead2396808182@ec2-204-236-239-225.compute-1.amazonaws.com:5432/du8q1k3diqj3d',
+        'NAME': 'dem69qr1polrbq',
+        'USER': 'mmjmuzsbkrxadr',
+        'PASSWORD':'1cd5d977fadeab733dda5f1ae5c24670c0466b60393e557d25cb5e4cf67897ca',
+        'HOST':'postgres://mmjmuzsbkrxadr:1cd5d977fadeab733dda5f1ae5c24670c0466b60393e557d25cb5e4cf67897ca@ec2-174-129-206-173.compute-1.amazonaws.com:5432/dem69qr1polrbq',
         'PORT':'5432',
     }
 }
