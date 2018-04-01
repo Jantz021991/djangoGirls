@@ -31,6 +31,9 @@
            <p> Translation into Spanish: {{ post.translation_spanish }} |
                      Word Count: {{ post.word_count }} |
                        Character Count: {{ post.character_count }}</p>
+             <p> Personality Type: {{ post.personalityKind }} |
+                 Personality Percentile Score {{ post.percentileValue }} |
+                  Personality Score: {{ post.personalityTrait }}</p>
                     </div>
                 {% endfor %}
             {% endblock %}
