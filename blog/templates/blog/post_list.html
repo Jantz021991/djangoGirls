@@ -21,19 +21,23 @@
                                 <p>published: {{ post.published_date }}</p>
                             </div>
                             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-                            <p>{{ post.text|linebreaksbr }}</p><span style="background-color:yellow">Watson Says:</span>
+                        <p>{{ post.text|linebreaksbr }}</p><span style="background-color:orange"><b>Watson Says:</b></span>
         <p>Anger : {{ post.angerScore }} |
         Disgust : {{ post.disgustScore }} |
         Fear : {{ post.fearScore }} |
         Joy : {{ post.joyScore }} |
         Sad : {{ post.sadScore }}</p>
-
-           <p> Translation into Spanish: {{ post.translation_spanish }} |
+                       <p> <span style="background-color: orange"><b>Watson says their personality as - </b></span> <br>
+                 {{ post.pname0 }} - Percentile Score: {{ post.percentile0value }}&nbsp;&nbsp;Personality Score: {{ post.rawScore0 }} <br>
+                 {{ post.pname1 }} - Percentile Score: {{ post.percentile1value }}&nbsp;&nbsp;Personality Score: {{ post.rawScore1 }} <br>
+                 {{ post.pname2 }} - Percentile Score: {{ post.percentile2value }}&nbsp;&nbsp;Personality Score: {{ post.rawScore2 }} <br>
+                 {{ post.pname3 }} - Percentile Score: {{ post.percentile3value }}&nbsp;&nbsp;Personality Score: {{ post.rawScore3 }} <br>
+                 {{ post.pname4 }} - Percentile Score: {{ post.percentile4value }}&nbsp;&nbsp;Personality Score: {{ post.rawScore4 }} <br>
+                </p>
+                        <p> <span style="background-color: orange"><b>Translation into Spanish:</b> </span>{{ post.translation_spanish }} |
                      Word Count: {{ post.word_count }} |
                        Character Count: {{ post.character_count }}</p>
-             <p> Personality Type: {{ post.personalityKind }} |
-                 Personality Percentile Score {{ post.percentileValue }} |
-                  Personality Score: {{ post.personalityTrait }}</p>
+
                     </div>
                 {% endfor %}
             {% endblock %}

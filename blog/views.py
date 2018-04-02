@@ -46,15 +46,33 @@ def post_list(request):
                                                              consumption_preferences=True),indent=2)
         post.profileObj2 = json.loads(profileObj)
 
-        post.personalityKind = post.profileObj2['personality'][1]['name']
-        # post.personalityScore = post.profileObj2['personality'][2]
-        post.percentile = post.profileObj2['personality'][3]['percentile']
-        post.percentileValue = post.percentile*100
-        post.personalityTrait = post.profileObj2['personality'][4]['raw_score']
-        print(post.personalityKind)
-        print(post.personalityTrait)
+        post.pname0 = post.profileObj2['personality'][0]['name']
+        post.percentile0 = post.profileObj2['personality'][0]['percentile']
+        post.percentile0value = post.percentile0*100
+        post.rawScore0 = post.profileObj2['personality'][0]['raw_score']
 
-      #Language Translation API
+        post.pname1 = post.profileObj2['personality'][1]['name']
+        post.percentile1 = post.profileObj2['personality'][1]['percentile']
+        post.percentile1value = post.percentile1 * 100
+        post.rawScore1 = post.profileObj2['personality'][1]['raw_score']
+
+        post.pname2 = post.profileObj2['personality'][2]['name']
+        post.percentile2 = post.profileObj2['personality'][2]['percentile']
+        post.percentile2value = post.percentile2 * 100
+        post.rawScore2 = post.profileObj2['personality'][2]['raw_score']
+
+        post.pname3 = post.profileObj2['personality'][3]['name']
+        post.percentile3 = post.profileObj2['personality'][3]['percentile']
+        post.percentile3value = post.percentile3 * 100
+        post.rawScore3 = post.profileObj2['personality'][3]['raw_score']
+
+        post.pname4 = post.profileObj2['personality'][4]['name']
+        post.percentile4 = post.profileObj2['personality'][4]['percentile']
+        post.percentile4value = post.percentile4 * 100
+        post.rawScore4 = post.profileObj2['personality'][4]['raw_score']
+
+
+        #Language Translation API
         translation = language_translator.translate(
             text=post.text,
             source='en',
